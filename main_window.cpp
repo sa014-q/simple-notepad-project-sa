@@ -65,7 +65,7 @@ main_window::main_window()
 main_window::~main_window() = default;
 
 // ---------------------------------------------------------------------------
-// set_font_size — единственное место где меняется размер шрифта
+// set_font_size
 // ---------------------------------------------------------------------------
 
 void main_window::set_font_size(int pt)
@@ -74,7 +74,6 @@ void main_window::set_font_size(int pt)
     QFont f = editor->font();
     f.setPointSize(pt);
     editor->setFont(f);
-    // line_number_editor::changeEvent(FontChange) подхватит и обновит поля.
 }
 
 // ---------------------------------------------------------------------------
@@ -166,8 +165,6 @@ void main_window::setup_format_menu()
 
 // ---------------------------------------------------------------------------
 // View menu — Zoom In / Zoom Out / Reset Zoom
-// QShortcut на главное окно чтобы шорткаты работали всегда,
-// независимо от того, какой виджет сейчас в фокусе.
 // ---------------------------------------------------------------------------
 void main_window::setup_view_menu()
 {

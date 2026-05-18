@@ -34,8 +34,6 @@ protected:
             const QString word = text.mid(word_start, length);
 
             if (!checker->is_correct(word)) {
-                // Grab whatever format is already on the range (bold, underline, etc.)
-                // and add the spell-check underline on top without removing anything.
                 QTextCharFormat fmt = format(word_start);
                 fmt.setUnderlineStyle(QTextCharFormat::SpellCheckUnderline);
                 fmt.setUnderlineColor(QColor(255, 50, 50));

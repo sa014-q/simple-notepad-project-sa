@@ -8,8 +8,8 @@
 
 class notepad_exception : public std::runtime_error {
 public:
-    explicit notepad_exception(const std::string& mass)
-        : std::runtime_error(mass)
+    explicit notepad_exception(const std::string& msg)
+        : std::runtime_error(msg)
     {
     }
 };

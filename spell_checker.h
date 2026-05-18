@@ -103,7 +103,6 @@ private:
         return result;
     }
 
-           // Classic two-row Levenshtein distance.
     [[nodiscard]] static int edit_distance(const std::string& a, const std::string& b)
     {
         const int m = static_cast<int>(a.size());
